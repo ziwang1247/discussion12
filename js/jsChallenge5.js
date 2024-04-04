@@ -5,5 +5,10 @@
 document.querySelectorAll('img').forEach(img => {
     img.addEventListener('mouseover', function() {
         let altText = img.getAttribute('alt');
+        let imgSrc = img.getAttribute('src');
+        img.style.display = 'none';
+        let div =  document.querySelector('#display')
+        div.innerHTML = `<img src="${imgSrc}" alt="${altText}">`;
+        
     })
 })
